@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "savol": "<b>1-savol:</b>\n$a$ va $b$ o'zaro tub sonlar uchun $a + \\frac{12}{b} = 27$ , $EKUK(a; b) = 150$ tenglik o'rinli bo'lsa, $a + b$ yig'indi nechaga teng?",
+    "variantlar": ["A) 30", "B) 31", "C) 32", "D) 33"],
+    "togri_javob": "B) 31",
+    "qiyinchilik": 0.8
+  },
+  {
+    "id": 2,
+    "savol": "<b>2-savol:</b>\nHisoblang:\n$\\frac{193}{55} : (1\\frac{5}{12} + 5\\frac{1}{60}) - (-\\frac{5}{11} - \\frac{1}{44}) : 3\\frac{3}{4}$",
+    "variantlar": ["A) 2/11", "B) 9/11", "C) 12/11", "D) 17/11"],
+    "togri_javob": "B) 9/11",
+    "qiyinchilik": -0.5
+  },
+  {
+    "id": 3,
+    "savol": "<b>3-savol:</b> Bir duradgor yasagan shkafni tannarxiga nisbatan 30% foyda bilan sotadi. Mijoz shkafdan mamnun bo'lmay, uni duradgorga qaytardi. Duradgor esa mijozga olgan pulining 10% kamini qaytardi. So'ngra duradgor shu shkafni tannarxiga nisbatan 20% foyda bilan boshqa bir mijozga sotdi. Oxirida duradgorning jami foydasi 1980 ming so'm bo'lgan bo'lsa, ushbu shkafning tannarxi nechchi ming so'm?",
+    "variantlar": ["A) 5000", "B) 6000", "C) 8000", "D) 9000"],
+    "togri_javob": "B",
+    "qiyinchilik": 0.75
+  },
+  {
+    "id": 4,
+    "savol": "<b>4-savol:</b> Ikki quvur birgalikda bo'sh hovuzni 6 soatda to'ldiradi. Agar 1-quvurning o'zi 2-quvurga qaraganda 5 soat tezroq to'ldirsa, 1-quvurning o'zi bo'sh hovuzni necha soatda to'ldira oladi?",
+    "variantlar": ["A) 8", "B) 10", "C) 12", "D) 15"],
+    "togri_javob": "B",
+    "qiyinchilik": 0.7
+  },
+  {
+    "id": 5,
+    "savol": "<b>5-savol:</b> $\\frac{(0,0032)^{-2} \\cdot (0,00004)^{-3}}{(0,02)^{-11}}$ kasrning qiymatini toping.",
+    "variantlar": ["A) \\frac{5}{16}", "B) \\frac{5}{32}", "C) 10", "D) 20"],
+    "togri_javob": "A",
+    "qiyinchilik": 0.8
+  },
+  {
+    "id": 6,
+    "savol": "<b>6-savol:</b>\n<b>Soddalashtiring:</b>\n$$\\left(\\frac{\\operatorname{tg} x + \\operatorname{ctg} x}{\\cos^4 x + 2\\sin^2 x - \\sin^4 x}\\right) \\cdot \\left(\\frac{1}{\\cos x}\\right)^{-1}$$",
+    "variantlar": ["A) sin x", "B) cos x", "C) 1 / sin x", "D) 1"],
+    "togri_javob": "C) 1 / sin x",
+    "qiyinchilik": 1.6
+  },
+  {
+    "id": 7,
+    "savol": "<b>7-savol:</b>\nGeometrik progressiyaning birinchi besh hadi yig'indisi birinchi hadining 5 barobariga teng. Progressiyaning birinchi o'n besh hadi yig'indisi esa 100 ga teng. Shu progressiyaning birinchi, oltinchi va o'n birinchi hadlari yig'indisini toping.",
+    "variantlar": ["A) 25", "B) 22", "C) 20", "D) 15"],
+    "togri_javob": "C) 20",
+    "qiyinchilik": 1.4
+  },
+  {
+    "id": 8,
+    "savol": "<b>8-savol:</b>\nAgar $a = 4, b = 5$ bo'lsa,\n$$\\left(\\frac{a}{\\sqrt{a^2+ab}} - \\frac{\\sqrt{a}}{\\sqrt{a+b}}\\right) : \\sqrt{\\frac{a}{a+b}}$$ ni hisoblang.",
+    "variantlar": ["A) -2", "B) 2", "C) 0", "D) 1"],
+    "togri_javob": "C) 0",
+    "qiyinchilik": 0.2
+  },
+  {
+    "id": 9,
+    "savol": "<b>9-savol:</b>\n$a = \\log_2 21$, $b = \\log_3 74$, $c = \\log_5 110$ sonlarini taqqoslang.",
+    "variantlar": ["A) a < b < c", "B) c < b < a", "C) a < c < b", "D) b < a < c"],
+    "togri_javob": "B) c < b < a",
+    "qiyinchilik": 0.6
+  },
+  {
+    "id": 10,
+    "savol": "<b>10-savol:</b>\n1 va 100 sonlari orasiga shunday 100 ta son qo'yilganki, ular arifmetik progressiya hosil qiladi. Shu qo'yilgan sonlar yig'indisini toping.",
+    "variantlar": ["A) 4050", "B) 4950", "C) 5050", "D) 5150"],
+    "togri_javob": "C) 5050",
+    "qiyinchilik": 0.8
+  },
+  {
+    "id": 11,
+    "savol": "<b>11-savol:</b>\n$a, b$ va $c$ musbat sonlarining o'rta arifmetigi ularning o'rta geometrigiga teng. $d, e$ va $f$ musbat sonlarining o'rta geometrigi $m$ ga teng bo'lsa, $(\\log_a d + \\log_b e + \\log_c f)$ va $(\\frac{1}{\\log_d m} + \\frac{1}{\\log_e m} + \\frac{1}{\\log_f m})$ sonlarining o'rta arifmetigini toping.",
+    "variantlar": ["A) \\frac{1}{3}", "B) 1", "C) \\frac{5}{3}", "D) \\frac{7}{2}"],
+    "togri_javob": "B) 1",
+    "qiyinchilik": 0.7
+  },
+  {
+    "id": 12,
+    "savol": "<b>12-savol:</b>\nIfodani soddalashtiring:\n$$\\frac{-4^{2x-1} \\cdot 3^{2x+1} - 12^{2x+1} \\cdot 3^{x+2}}{36^x \\cdot 8 + 9^x \\cdot 2^{2x+1}}$$",
+    "variantlar": ["A) 11.1", "B) 10.1", "C) -11.1", "D) -10.1"],
+    "togri_javob": "C) -11.1",
+    "qiyinchilik": 0.5
+  },
+  {
+    "id": 13,
+    "savol": "<b>13-savol:</b>\n$\\sqrt{28 + 10\\sqrt{3}} + \\sqrt{28 - 10\\sqrt{3}}$ ildizni hisoblang.",
+    "variantlar": ["A) \\sqrt{3}", "B) 2\\sqrt{3}", "C) 5", "D) 10"],
+    "togri_javob": "D) 10",
+    "qiyinchilik": 0.4
+  },
+  {
+    "id": 14,
+    "savol": "<b>14-savol:</b>\n$$2^{2x+1} - 21 \\cdot \\left(\\frac{1}{2}\\right)^{2x+3} + 2 \\geq 0$$ tengsizlikni yeching.",
+    "variantlar": [
+      "A) [\\log_4 \\frac{1}{4}; +\\infty)",
+      "B) [\\log_4 \\frac{3}{4}; +\\infty)",
+      "C) (-\\infty; \\log_4 3)",
+      "D) (-\\infty; \\log_4 \\frac{3}{4})"
+    ],
+    "togri_javob": "B) [\\log_4 \\frac{3}{4}; +\\infty)",
+    "qiyinchilik": 1.1
+  },
+  {
+    "id": 15,
+    "savol": "<b>15-savol:</b>\n$x_1$ va $x_2$ sonlari $x^2 + 3x - k = 0$ tenglamaning haqiqiy ildizlari va $x_1 - 2x_2 = 9$ bo'lsa, $k$ parametrning qiymatini toping.",
+    "variantlar": ["A) -4", "B) -2", "C) 2", "D) 4"],
+    "togri_javob": "D) 4",
+    "qiyinchilik": 0.5
+  },
+  {
+    "id": 16,
+    "savol": "<b>16-savol:</b>\n$$\\sqrt{x^2 - x - 6} + \\sqrt{x^2 - 7x + 12} = 0$$ tenglama nechta haqiqiy ildizga ega?",
+    "variantlar": ["A) 2", "B) 3", "C) 1", "D) ildizga ega emas"],
+    "togri_javob": "C) 1",
+    "qiyinchilik": 0.6
+  },
+  {
+    "id": 17,
+    "savol": "<b>17-savol:</b> $m$ va $n$ noldan farqli haqiqiy sonlar.\n\n$$\\frac{x + 3m}{n - 2x} \\geq 0$$\n\ntengsizlikning yechimlar to'plami $(n - 2, n + 5]$ bo'lsa, $m \\cdot n$ ko'paytmani toping.",
+    "variantlar": ["A) -6", "B) -12", "C) -8", "D) -9"],
+    "togri_javob": "B",
+    "qiyinchilik": 0.8
+  },
+  {
+    "id": 18,
+    "savol": "<b>18-savol:</b> $\\begin{cases} 3 \\cdot 2^x - \\log_2 y = 2 \\\\ 2^x \\cdot \\log_2 y = 1 \\end{cases}$ tenglamalar sistemasining yechimi bo'lgan $x, y$ sonlar yig'indisini toping.",
+    "variantlar": ["A) 1", "B) 3", "C) -1", "D) 2"],
+    "togri_javob": "D",
+    "qiyinchilik": 0.85
+  },
+  {
+    "id": 19,
+    "savol": "<b>19-savol:</b> $\\frac{|x-5|-1}{2|x-6|-4} \\leq 1$ tengsizlik $[-15; 15]$ oraliqda nechta butun yechimga ega?",
+    "variantlar": ["A) 28", "B) 25", "C) 27", "D) 23"],
+    "togri_javob": "A",
+    "qiyinchilik": 0.85
+  },
+  {
+    "id": 20,
+    "savol": "<b>20-savol:</b> $y = -\\sqrt{x} + 1$ funksiyaning grafigi qayi choraklardan o'tadi.",
+    "variantlar": ["A) I, II", "B) I, III", "C) II, IV", "D) I, IV"],
+    "togri_javob": "D",
+    "qiyinchilik": 0.65
+  },
+  {
+    "id": 21,
+    "savol": "<b>21-savol:</b> $f(\\sin x) = x$ va $g(x) = \\operatorname{tg} x$ funksiyalar berilgan. $y = f^{-1}(g^{-1}(x))$ funksiya grafigi $A\\left(\\frac{3}{5}; n\\right)$ nuqtadan o'tsa, $n$ ning qiymatini toping.",
+    "variantlar": ["A) -\\frac{3}{5}", "B) -\\frac{4}{5}", "C) \\frac{3}{5}", "D) \\frac{5}{12}"],
+    "togri_javob": "D",
+    "qiyinchilik": 0.9
+  },
+  {
+    "id": 22,
+    "savol": "<b>22-savol:</b> $f(3x - 2) = 13x^2 + x - 2$ berilgan bo'lsa, $f'(1) + f(1)$ qiymatini toping.",
+    "variantlar": ["A) 12", "B) 21", "C) 32", "D) 24"],
+    "togri_javob": "B",
+    "qiyinchilik": 0.75
+  },
+  {
+    "id": 23,
+    "savol": "<b>23-savol:</b>\nAgar $y = f(x)$ funksiya uchun $\\int_{1}^{e^2} \\left(\\frac{x \\cdot f'(x) - 2f(x)}{x^3}\\right) dx = 10e^2$ va $f(1) = 6e^2$ bo'lsa, $f(e^2)$ ning qiymatini toping.",
+    "variantlar": ["A) 16e^6", "B) 16e^4", "C) e^4", "D) e^5"],
+    "togri_javob": "A) 16e^6",
+    "qiyinchilik": 2.2
+  },
+  {
+    "id": 24,
+    "savol": "<b>24-savol:</b>\nTomoni 4 cm bo'lgan kvadratga ichki va tashqi doira chizildi. Ichki va tashqi doiralar orasida hosil bo'lgan halqa yuzini ($cm^2$) toping.",
+    "variantlar": ["A) 4\\pi", "B) 2\\pi", "C) 8\\pi", "D) 6\\pi"],
+    "togri_javob": "A) 4\\pi",
+    "qiyinchilik": 0.4
+  },
+  {
+    "id": 25,
+    "savol": "<b>25-savol:</b>\n$ABCD$ trapetsiyada, $\\sin \\alpha = \\frac{4}{5}$ bo'lsa, $\\operatorname{ctg} \\beta$ ni toping.",
+    "variantlar": ["A) 5/8", "B) 3/4", "C) 2/9", "D) 1/6"],
+    "togri_javob": "D) 1/6",
+    "qiyinchilik": 0.9
+  },
+  {
+    "id": 26,
+    "savol": "<b>26-savol:</b>\n$ABCD$ va $CEFG$ kvadratlar uchun $AE = EG$ bo'lsa, katta kvadrat yuzining kichik kvadrat yuziga nisbatini toping.",
+    "variantlar": ["A) 1 + \\sqrt{3}", "B) 2 - \\sqrt{3}", "C) 4 + 2\\sqrt{3}", "D) 2\\sqrt{3} - 1"],
+    "togri_javob": "C) 4 + 2\\sqrt{3}",
+    "qiyinchilik": 1.5
+  },
+  {
+    "id": 27,
+    "savol": "<b>27-savol:</b>\n$ABC$ uchburchakda $\\angle BAC = 45^{\\circ}$, $\\angle ABC = 30^{\\circ}$ va unga tashqi chizilgan aylananing markazi $O$, bu aylananing radiusi $\\sqrt{2 - \\sqrt{3}}$ cm ga teng bo'lsa, $AOBC$ to'rtburchakning yuzini ($cm^2$) toping.",
+    "variantlar":["A) 1", "B) 2", "C) 1/2", "D) 1/4"],
+    "togri_javob": "C) 1/2",
+    "qiyinchilik": 1.3
+  },
+  {
+    "id": 28,
+    "savol": "<b>28-savol:</b>\nTashqi burchagi $30^{\\circ}$ ga teng bo'lgan muntazam ko'pburchakka aylana ichki chizilgan. Aylana radiusi $2$ cm ga teng bo'lsa, ko'pburchak yuzini ($cm^2$) toping.",
+    "variantlar": [
+      "A) 48(2 - \\sqrt{3})",
+      "B) 48(2 + \\sqrt{3})",
+      "C) 24(2 - \\sqrt{3})",
+      "D) 24(2 + \\sqrt{3})"
+    ],
+    "togri_javob": "A) 48(2 - \\sqrt{3})",
+    "qiyinchilik": 1.1
+  },
+  {
+    "id": 29,
+    "savol": "<b>29-savol:</b>\nRasmda berilgan koordinatalar sistemasida tasvirlangan aylananing tenglamasini tuzing. Tenglamani tuzishda rasmda berilgan ma'lumotlardan foydalaning.",
+    "variantlar": [
+      "A) (x - 3)^2 + (y - 5)^2 = 25",
+      "B) (x - 5)^2 + (y - 3)^2 = 9",
+      "C) (x - 3)^2 + (y - 5)^2 = 9",
+      "D) (x - 3)^2 + (y - 5)^2 = 9"
+    ],
+    "togri_javob": "C) (x - 3)^2 + (y - 5)^2 = 9",
+    "qiyinchilik": 0.5
+  },
+  {
+    "id": 30,
+    "savol": "<b>30-savol:</b>\n$ABCD$ parallelogramm tekisligida yotmagan $M$ nuqtadan parallelogramm tekisligiga $MB$ perpendikulyar kesma tushirildi. Bunda $\\angle MAD = 90^{\\circ}$, $BD = 5$ cm, $BC = 3$ cm va $MB = 3$ cm bo'lsa, $MA$ kesma uzunligini (cm) toping.",
+    "variantlar": ["A) 5", "B) 4", "C) \\sqrt{34}", "D) \\sqrt{41}"],
+    "togri_javob": "A) 5",
+    "qiyinchilik": 1.2
+  },
+  {
+    "id": 31,
+    "savol": "<b>31-savol:</b>\n$A = \\{0, 1, 3, 5, 8, 9\\}$ to'plam elementlaridan tuzilgan 3 xonali $\\overline{abc}$ sonining raqamlari $a > b > c$ tartibda bo'lish ehtimoli qanday? ($a \\neq b \\neq c$)",
+    "variantlar": ["A) 1/4", "B) 2/5", "C) 1/5", "D) 1/6"],
+    "togri_javob": "C) 1/5",
+    "qiyinchilik": 1.0
+  },
+  {
+    "id": 32,
+    "savol": "<b>32-savol:</b>\nUch xil o'yinchoqni to'rt farzandga necha xil usulda taqsimlash mumkin?",
+    "variantlar": ["A) 81", "B) 64", "C) 60", "D) 12"],
+    "togri_javob": "B) 64",
+    "qiyinchilik": 0.4
+  },
+  {
+    "id": 33,
+    "savol": "<b>33-35-savollar uchun umumiy shart:</b>\nYarim shar, silindr va konudan iborat bo'lgan yopiq suv idishiga bir oz suv solingan (1-rasm). Bunda konus balandligi uning asosi radiusiga teng. $\\pi \\approx 3$ deb hisoblang.\n\n<b>Javob variantlari:</b>\nA) 72  B) 54  C) 84  D) 45  E) 60  F) 108\n\n<b>33-savol:</b> Konus balandligi 18 dm ga teng. Idish birinchi rasmdagi holatini teskari qilib ikkinchi rasmdagi holatga keltirilganda, undagi suv balandligi oshgani sezildi. Suv sathi qancha (sm) oshgan?",
+    "variantlar": [],
+    "togri_javob": "F",
+    "qiyinchilik": 1.8
+  },
+  {
+    "id": 36,
+    "savol": "<b>36-savol:</b>\n$k$ parametrga bog'liq $\\left( \\sqrt{\\frac{x}{225}} - k \\right) \\cdot \\log_2(x - 2025) = 0$ tenglama berilgan.\n\na) Tenglama yagona ildizga ega bo'ladigan $k$ ning natural qiymatlari yig'indisini toping.\nb) Tenglama ikkita ildizga ega bo'ladigan $k$ ning eng kichik butun qiymatini toping.\n\n<i>Javobni 'a=6, b=4' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=6, b=4",
+    "qiyinchilik": 2.1
+  },
+  {
+    "id": 34,
+    "savol": "<b>34-savol:</b>\n1-rasmda silindr va konus balandligi mos ravishda $4 \\text{ dm}$ va $3 \\text{ dm}$ bo'lib, idishga silindr qismi balandligining yarmi qadar suv solingan bo'lsa, suvning hajmi necha litr? ($\\pi \\approx 3$)",
+    "variantlar": [],
+    "togri_javob": "54",
+    "qiyinchilik": 1.9
+  },
+  {
+    "id": 35,
+    "savol": "<b>35-savol:</b>\nSilindr va konus balandligi mos ravishda $5 \\text{ dm}$ va $2 \\text{ dm}$ bo'lib, idishning konus shaklidagi qismi idishning qopqog'i o'rnida bo'lsa, qopqoq idishdan olib tashlangandan so'ng suv idishining to'la sirtini ($dm^2$) toping. ($\\pi \\approx 3$)",
+    "variantlar": [],
+    "togri_javob": "84",
+    "qiyinchilik": 2.0
+  },
+  {
+    "id": 37,
+    "savol": "<b>37-savol:</b>\n$\\begin{cases} 2\\sin 3x + 2\\cos 4x = 1 + \\sqrt{2} \\\\ 2\\sin 7x - 2\\sin x = \\sqrt{2} \\end{cases}$ tenglamalar sistemasini yeching.\n\na) Tenglamar sistemasi $[0; \\pi]$ kesmada nechta ildizga ega?\nb) Tenglamalar sistemasining $[0; \\pi]$ kesmadagi ildizlari yig'indisini toping.\n\n<i>Javobni 'a=1, b=pi/4' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=1,b=pi/4",
+    "qiyinchilik": 2.3
+  },
+  {
+    "id": 38,
+    "savol": "<b>38-savol:</b>\n$f(x)$ funksiya uchun $f(x) + 4f\\left(\\frac{1}{x}\\right) = \\frac{2x^2 + 5x + 8}{x}$ tenglik o'rinli.\n\na) $f(17)$ ni hisoblang.\nb) $f(x) + f(2x) = ax + b$ bo'lsa, $a + b$ ni toping.\n\n<i>Javobni 'a=2, b=3' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=2,b=3",
+    "qiyinchilik": 1.7
+  },
+  {
+    "id": 39,
+    "savol": "<b>39-savol:</b>\nQuyida $(-19; 2)$ oraliqda $y = f(x)$ funksiya hosilasining grafigi berilgan.\n\na) $y = f(x)$ funksiyaning ekstremum nuqtalari sonini toping.\nb) $f''(x) \\cdot f'(x) = 0$ tenglama nechta ildizga ega?\n\n<i>Javobni 'a=5, b=12' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=5,b=11",
+    "qiyinchilik": 2.0
+  },
+  {
+    "id": 40,
+    "savol": "<b>40-savol:</b>\n$f(x) = x^4 + \\sin x + mx^2 + nx + 7$ funksiya uchun $f(1) = 8 + \\sin 1$ va $f'(-1) = \\cos 1 - 19$ tenglik o'rinli.\n\na) $m \\cdot n$ ni toping.\nb) $\\int_{n}^{m} \\frac{\\sin^3 x}{x^4 + 2025} dx$ integralni hisoblang.\n\n<i>Javobni 'a=1, b=0' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=-12,b=0",
+    "qiyinchilik": 2.0
+  },
+  {
+    "id": 41,
+    "savol": "<b>41-savol:</b>\nYuzasi $24 \\text{ cm}^2$ bo'lgan $ABC$ to'g'ri burchakli uchburchakka, $BC$ katetni diametr qilib yarim aylana gipotenuza bilan $D$ nuqtada kesishadigan qilib chizilgan. $BC = 8 \\text{ cm}$ va kichik aylana markazi $O$ nuqta.\n\na) $O$ markazli aylana radiusini (cm) toping.\nb) $O$ nuqtadan $BC$ tomongacha bo'lgan eng qisqa masofani (cm) toping.\n\n<i>Javobni 'a=4, b=0' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=4,b=0",
+    "qiyinchilik": 1.4
+  },
+  {
+    "id": 42,
+    "savol": "<b>42-savol:</b>\n$ABCD$ trapetsiyada $BC \\parallel AD$ va $AC$ diagonalda olingan $M$ nuqta uni $AM:MC = 1:3$ nisbatda bo'ladi. $K$ nuqta $CD$ tomonni o'rtasi. Agar $2 \\cdot BC = AD$ bo'lsa:\n\na) Trapetsiyaning yuzini $MCK$ uchburchak yuziga nisbatini toping.\nb) $AMKD$ qavariq to'rtburchak yuzi $5 \\text{ cm}^2$ bo'lsa, trapetsiya yuzini ($cm^2$) toping.\n\n<i>Javobni 'a=8, b=12' ko'rinishida kiriting:</i>",
+    "variantlar": [],
+    "togri_javob": "a=8,b=12",
+    "qiyinchilik": 1.9
+  },
+  {
+    "id": 43,
+    "savol": "<b>43-savol:</b> Qavariq teng tomonli ABCDEF oltiburchakning $\\angle A, \\angle C, \\angle E$ lari $150^\\circ$ dan bo'lib, uning tomoni uzunligi $a$ cm ga teng.\n\na) Agar $a = 5\\sqrt{3} - 3$ bo'lsa, oltiburchak yuzini (cm$^2$) toping.\nb) Agar $a = 3\\sqrt{2} - \\sqrt{3}$ bo'lsa, AD diagonal uzunligini (cm) toping.",
+    "variantlar": [],
+    "togri_javob": "",
+    "qiyinchilik": 0.85
+  },
+  {
+    "id": 44,
+    "savol": "<b>44-savol:</b> Muntazam oltiburchakli prizmaga ichki chizilgan sharning radiusi $\\sqrt{3}$ cm ga teng.\n\na) Prizmaning yon sirti yuzini (cm$^2$) toping.\nb) Prizmaning hajmini (cm$^3$) toping.",
+    "variantlar": [],
+    "togri_javob": "",
+    "qiyinchilik": 0.75
+  },
+  {
+    "id": 45,
+    "savol": "<b>45-savol:</b> Quyida qum uyumining parabolik kesimi keltirilgan. Unga yer bilan $45^\\circ$ burchak hosil qiluvchi uzunligi $4\\sqrt{2}$ m ga teng narvon parabolik kesimning A nuqtasiga tegib turadi. Chizmadan foydalanib a va b shartlarni bajaring.\n\na) Qum uyumining eng tepasidan yergacha bo'lgan masofani (m) toping.\nb) Qum uyumining parabolik kesim yuzini (m$^2$) toping.",
+    "variantlar": [],
+    "togri_javob": "",
+    "qiyinchilik": 0.9
+  }
+  ]
