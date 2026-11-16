@@ -138,11 +138,11 @@
 
             savolSoni++;
             ishlatilganIdlar.push(joriySavol.id);
-            document.getElementById('progress').innerText = Savol: ${savolSoni} / ${Math.min(45, allQuestions.length)};
-            document.getElementById('theta-display').innerText = Theta: ${theta.toFixed(2)};
+            document.getElementById('progress').innerText = `Savol: ${savolSoni} / ${Math.min(45, allQuestions.length)}`;
+            document.getElementById('theta-display').innerText = `Theta: ${theta.toFixed(2)}`;
 
             let tozaSavol = joriySavol.savol.replace(/<b>\d+-savol:<\/b>\s*/i, '');
-            document.getElementById('q-text').innerHTML = <b>${savolSoni}-savol:</b> ${tozaSavol};
+            document.getElementById('q-text').innerHTML = `<b>${savolSoni}-savol:</b> ${tozaSavol}`;
 
             const optBox = document.getElementById('options-box');
             optBox.innerHTML = '';
@@ -215,3 +215,6 @@
                 <button class="submit-btn" style="background-color:#6c757d;" onclick="location.reload()">Qayta ishlash</button>
                 `;
         }
+        </script>
+        </body>
+        </html>
