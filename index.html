@@ -7,13 +7,13 @@
     <script src="https://telegram.org"></script>
     <script>
         window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
         };
     </script>
     <script id="MathJax-script" async src="https://jsdelivr.net"></script>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--tg-theme-bg-color, #f4f4f9);
             color: var(--tg-theme-text-color, #222);
             margin: 0;
@@ -23,18 +23,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: var(--tg-theme-secondary-bg-color, #fff);
+            background: var(--tg-theme-secondary-bg-color, #ffffff);
             padding: 12px 16px;
             border-radius: 12px;
             margin-bottom: 16px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             font-weight: bold;
         }
         .card {
-            background: var(--tg-theme-secondary-bg-color, #fff);
+            background: var(--tg-theme-secondary-bg-color, #ffffff);
             padding: 20px;
             border-radius: 14px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
         .question-text {
             font-size: 17px;
@@ -53,8 +53,12 @@
             color: var(--tg-theme-text-color, #222);
             font-size: 16px;
             cursor: pointer;
+            transition: 0.2s;
         }
-        .option-btn:hover { border-color: #2481cc; }
+        .option-btn:hover {
+            border-color: #2481cc;
+            background: #eef6fc;
+        }
         .open-input {
             width: 100%;
             padding: 14px;
@@ -67,125 +71,147 @@
         .submit-btn {
             width: 100%;
             padding: 14px;
-            background: var(--tg-theme-button-color, #2481cc);
-            color: var(--tg-theme-button-text-color, #fff);
+            background-color: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
             border: none;
             border-radius: 10px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
+            margin-top: 8px;
+        }
+        .submit-btn:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <span id="progress">Savol: 1 / 45</span>
-    <span id="theta-display">Theta: 0.0</span>
-</div>
+    <div class="header">
+        <span id="progress">Savol: 1 / 45</span>
+        <span id="theta-display">Theta: 0.00</span>
+    </div>
 
-<div class="card" id="quiz-box">
-    <div class="question-text" id="q-text">Savollar yuklanmoqda...</div>
-    <div id="options-box"></div>
-</div>
+    <div class="card" id="quiz-box">
+        <div class="question-text" id="q-text">Savollar yuklanmoqda...</div>
+        <div id="options-box"></div>
+    </div>
 
-<script>
-    const tg = window.Telegram.WebApp;
-    tg.expand();
-
-    let allQuestions = [];
-    let ishlatilganIdlar = [];
-    let theta = 0.0;
-    let savolSoni = 0;
-    let joriySavol = null;
-
-    fetch('testlar.json')
-        .then(res => res.json())
-        .then(data => {
-            allQuestions = data;
-            yuborishKeyingiSavol();
-        })
-        .catch(() => {
-            document.getElementById('q-text').innerText = "Xatolik: testlar.json yuklanmadi!";
-        });
-
-    function engMosSavol() {
-        const qolganSavollar = allQuestions.filter(s => !ishlatilganIdlar.includes(s.id));
-        if (qolganSavollar.length === 0) return null;
-        qolganSavollar.sort((a, b) => Math.abs(a.qiyinchilik - theta) - Math.abs(b.qiyinchilik - theta));
-        return qolganSavollar[0];
-    }
-
-    function yuborishKeyingiSavol() {
-        joriySavol = engMosSavol();
-        if (!joriySavol) {
-            yakunlashTest();
-            return;
+    <script>
+        const tg = window.Telegram ? window.Telegram.WebApp : null;
+        if (tg) {
+            tg.expand();
         }
 
-        savolSoni++;
-        ishlatilganIdlar.push(joriySavol.id);
-        document.getElementById('progress').innerText = Savol: ${savolSoni} / ${allQuestions.length};
-        document.getElementById('theta-display').innerText = Theta: ${theta.toFixed(1)};
+        let allQuestions = [];
+        let ishlatilganIdlar = [];
+        let theta = 0.0;
+        let savolSoni = 0;
+        let togriJavoblar = 0;
+        let joriySavol = null;
 
-        let tozaSavol = joriySavol.savol.replace(/<b>\d+-savol:<\/b>/gi, '').trim();
-        document.getElementById('q-text').innerHTML = <b>${savolSoni}-savol:</b> ${tozaSavol};
-
-        const optBox = document.getElementById('options-box');
-        optBox.innerHTML = '';
-
-        if (joriySavol.variantlar && joriySavol.variantlar.length > 0) {
-            joriySavol.variantlar.forEach(opt => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerHTML = opt;
-                btn.onclick = () => javobniTekshirish(opt);
-                optBox.appendChild(btn);
+        fetch('testlar.json')
+            .then(res => {
+                if (!res.ok) throw new Error("testlar.json fayli topilmadi!");
+                return res.json();
+            })
+            .then(data => {
+                allQuestions = data;
+                yuborishKeyingiSavol();
+            })
+            .catch(err => {
+                document.getElementById('q-text').innerText = "Xatolik: " + err.message;
             });
-        } else {
-            const inp = document.createElement('input');
-            inp.type = 'text';
-            inp.className = 'open-input';
-            inp.placeholder = 'Javobingizni kiriting...';
-
-            const subBtn = document.createElement('button');
-            subBtn.className = 'submit-btn';
-            subBtn.innerText = 'Tasdiqlash';
-            subBtn.onclick = () => {
-                if (inp.value.trim() !== '') javobniTekshirish(inp.value.trim());
-            };
-            optBox.appendChild(inp);
-            optBox.appendChild(subBtn);
+            function engMosSavol() {
+            const qolganSavollar = allQuestions.filter(s => !ishlatilganIdlar.includes(s.id));
+            if (qolganSavollar.length === 0) return null;
+            qolganSavollar.sort((a, b) => Math.abs(a.qiyinchilik - theta) - Math.abs(b.qiyinchilik - theta));
+            return qolganSavollar[0];
         }
 
-        if (window.MathJax) MathJax.typesetPromise();
-    }
+        function yuborishKeyingiSavol() {
+            joriySavol = engMosSavol();
+            if (!joriySavol || savolSoni >= 45) {
+                yakunlashTest();
+                return;
+            }
 
-    function javobniTekshirish(javob) {
-        if (javob.trim() === (joriySavol.togri_javob || '').trim()) {
-            theta += 0.3;
-        } else {
-            theta -= 0.3;
+            savolSoni++;
+            ishlatilganIdlar.push(joriySavol.id);
+            document.getElementById('progress').innerText = Savol: ${savolSoni} / ${Math.min(45, allQuestions.length)};
+            document.getElementById('theta-display').innerText = Theta: ${theta.toFixed(2)};
+
+            let tozaSavol = joriySavol.savol.replace(/<b>\d+-savol:<\/b>\s*/i, '');
+            document.getElementById('q-text').innerHTML = <b>${savolSoni}-savol:</b> ${tozaSavol};
+
+            const optBox = document.getElementById('options-box');
+            optBox.innerHTML = '';
+
+            if (joriySavol.variantlar && joriySavol.variantlar.length > 0) {
+                joriySavol.variantlar.forEach(variant => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = variant;
+                    btn.onclick = () => javobniTekshirish(variant);
+                    optBox.appendChild(btn);
+                });
+            } else {
+                const inp = document.createElement('input');
+                inp.type = 'text';
+                inp.className = 'open-input';
+                inp.placeholder = 'Javobingizni kiriting...';
+
+                const subBtn = document.createElement('button');
+                subBtn.className = 'submit-btn';
+                subBtn.innerText = 'Javobni tasdiqlash';
+                subBtn.onclick = () => javobniTekshirish(inp.value);
+
+                optBox.appendChild(inp);
+                optBox.appendChild(subBtn);
+            }
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
         }
-        yuborishKeyingiSavol();
-    }
 
-    function yakunlashTest() {
-        document.getElementById('quiz-box').innerHTML =
-            "<h3>✅ Barcha savollar yakunlandi!</h3>" +
-            "<p>Jami yechilgan savollar: <b>" + savolSoni + " ta</b></p>" +
-            "<p>Yakuniy Theta darajangiz: <b>" + theta.toFixed(2) + "</b></p>" +
-            "<button class='submit-btn' onclick='natijaniBotgaYuborish()'>Natijani va Sertifikat darajasini ko'rish</button>";
-        ;
-    }
+        function javobniTekshirish(javob) {
+            const foydalanuvchiJavobi = String(javob).trim();
+            const togri = String(joriySavol.togri_javob || '').trim();
 
-    function natijaniBotgaYuborish() {
-        tg.sendData(JSON.stringify({
-            theta: Number(theta.toFixed(2)),
-            savol_soni: savolSoni
-        }));
-    }
-</script>
+            if (togri !== '' && foydalanuvchiJavobi === togri) {
+                theta += 0.3;
+                togriJavoblar++;
+            } else {
+                theta -= 0.3;
+            }
+            yuborishKeyingiSavol();
+        }
 
-</body>
-</html>
+        function sertifikatDarajasi(ball) {
+            if (ball >= 70) return "A+";
+            if (ball >= 65) return "A";
+            if (ball >= 60) return "B+";
+            if (ball >= 55) return "B";
+            if (ball >= 50) return "C+";
+            if (ball >= 46) return "C";
+            return "Sertifikat berilmaydi";
+        }
+
+        function yakunlashTest() {
+            let yakuniyBall = Math.round(50 + (theta * 10));
+            if (yakuniyBall > 100) yakuniyBall = 100;
+            if (yakuniyBall < 0) yakuniyBall = 0;
+            const daraja = sertifikatDarajasi(yakuniyBall);
+
+            document.getElementById('quiz-box').innerHTML =`
+                <h3>✅ Barcha savollar yakunlandi!</h3>
+                <p>Jami yechilgan savollar: <b>${savolSoni}</b></p>
+                <p>To'g'ri javoblar soni: <b>${togriJavoblar}</b></p>
+                <p>Yakuniy Theta darajangiz: <b>${theta.toFixed(2)}</b></p>
+                <p>Milliy sertifikat bali: <b>${yakuniyBall}</b></p>
+                <p>Sertifikat darajasi: <b>${daraja}</b></p>
+                <button class="submit-btn" onclick="natijaniBotgaYuborish()">Natijani Telegram botga yuborish</button>
+                <button class="submit-btn" style="background-color:#6c757d;" onclick="location.reload()">Qayta ishlash</button>
+                `;
+        }
