@@ -19,7 +19,7 @@
             margin: 0;
             padding: 16px;
         }
-        .header {
+        .sarlavha{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -30,18 +30,18 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             font-weight: bold;
         }
-        .card {
+        .kartochka {
             background: var(--tg-theme-secondary-bg-color, #ffffff);
             padding: 20px;
             border-radius: 14px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        .question-text {
+        .savol_matni {
             font-size: 17px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        .option-btn {
+        .variant_tugma {
             display: block;
             width: 100%;
             text-align: left;
@@ -55,11 +55,11 @@
             cursor: pointer;
             transition: 0.2s;
         }
-        .option-btn:hover {
+        .variant_tugma:hover {
             border-color: #2481cc;
             background: #eef6fc;
         }
-        .open-input {
+        .ochiq_savol_katagi {
             width: 100%;
             padding: 14px;
             font-size: 16px;
@@ -68,7 +68,7 @@
             box-sizing: border-box;
             margin-bottom: 12px;
         }
-        .submit-btn {
+        .yuborish_tugmasi {
             width: 100%;
             padding: 14px;
             background-color: var(--tg-theme-button-color, #2481cc);
@@ -80,20 +80,20 @@
             cursor: pointer;
             margin-top: 8px;
         }
-        .submit-btn:hover {
+        .yuborish_tugmasi:hover {
             opacity: 0.9;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <span id="progress">Savol: 1 / 45</span>
-        <span id="theta-display">Theta: 0.00</span>
+    <div class="sarlavha">
+        <span id="savol_raqami">Savol: 1 / 45</span>
+        <span id="darajangiz_korsatkichi>darajangiz: 0.00</span>
     </div>
 
-    <div class="card" id="quiz-box">
-        <div class="question-text" id="q-text">Savollar yuklanmoqda...</div>
+    <div class="kartochka" id="quiz-box">
+        <div class="savol_matni" id="q-text">Savollar yuklanmoqda...</div>
         <div id="options-box"></div>
     </div>
 
@@ -103,9 +103,9 @@
             tg.expand();
         }
 
-        let allQuestions = [];
+        let barchaSavollar = [];
         let ishlatilganIdlar = [];
-        let theta = 0.0;
+        let darajangiz = 0.0;
         let savolSoni = 0;
         let togriJavoblar = 0;
         let joriySavol = null;
@@ -116,16 +116,16 @@
                 return res.json();
             })
             .then(data => {
-                allQuestions = data;
+                barchaSavollar = data;
                 yuborishKeyingiSavol();
             })
             .catch(err => {
                 document.getElementById('q-text').innerText = "Xatolik: " + err.message;
             });
             function engMosSavol() {
-            const qolganSavollar = allQuestions.filter(s => !ishlatilganIdlar.includes(s.id));
+            const qolganSavollar = barchaSavollar.filter(s => !ishlatilganIdlar.includes(s.id));
             if (qolganSavollar.length === 0) return null;
-            qolganSavollar.sort((a, b) => Math.abs(a.qiyinchilik - theta) - Math.abs(b.qiyinchilik - theta));
+            qolganSavollar.sort((a, b) => Math.abs(a.qiyinchilik - darajangiz) - Math.abs(b.qiyinchilik - darajangiz));
             return qolganSavollar[0];
         }
 
@@ -138,8 +138,8 @@
 
             savolSoni++;
             ishlatilganIdlar.push(joriySavol.id);
-            document.getElementById('progress').innerText = `Savol: ${savolSoni} / ${Math.min(45, allQuestions.length)}`;
-            document.getElementById('theta-display').innerText = `Theta: ${theta.toFixed(2)}`;
+            document.getElementById('savol_raqami').innerText = `Savol: ${savolSoni} / ${Math.min(45, barchaSavollar.length)}`;
+            document.getElementById('darajangiz_korsatkichi').innerText = `darajangiz: ${darajangiz.toFixed(2)}`;
 
             let tozaSavol = joriySavol.savol.replace(/<b>\d+-savol:<\/b>\s*/i, '');
             document.getElementById('q-text').innerHTML = `<b>${savolSoni}-savol:</b> ${tozaSavol}`;
@@ -150,7 +150,7 @@
             if (joriySavol.variantlar && joriySavol.variantlar.length > 0) {
                 joriySavol.variantlar.forEach(variant => {
                     const btn = document.createElement('button');
-                    btn.className = 'option-btn';
+                    btn.className = 'variant_tugma';
                     btn.innerHTML = variant;
                     btn.onclick = () => javobniTekshirish(variant);
                     optBox.appendChild(btn);
@@ -158,11 +158,11 @@
             } else {
                 const inp = document.createElement('input');
                 inp.type = 'text';
-                inp.className = 'open-input';
+                inp.className = 'ochiq_savol_katagi';
                 inp.placeholder = 'Javobingizni kiriting...';
 
                 const subBtn = document.createElement('button');
-                subBtn.className = 'submit-btn';
+                subBtn.className = 'yuborish_tugmasi';
                 subBtn.innerText = 'Javobni tasdiqlash';
                 subBtn.onclick = () => javobniTekshirish(inp.value);
 
@@ -180,10 +180,10 @@
             const togri = String(joriySavol.togri_javob || '').trim();
 
             if (togri !== '' && foydalanuvchiJavobi === togri) {
-                theta += 0.3;
+                darajangiz += 0.3;
                 togriJavoblar++;
             } else {
-                theta -= 0.3;
+                darajangiz -= 0.3;
             }
             yuborishKeyingiSavol();
         }
@@ -199,7 +199,7 @@
         }
 
         function yakunlashTest() {
-            let yakuniyBall = Math.round(50 + (theta * 10));
+            let yakuniyBall = Math.round(50 + (darajangiz * 10));
             if (yakuniyBall > 100) yakuniyBall = 100;
             if (yakuniyBall < 0) yakuniyBall = 0;
             const daraja = sertifikatDarajasi(yakuniyBall);
@@ -208,11 +208,10 @@
                 <h3>✅ Barcha savollar yakunlandi!</h3>
                 <p>Jami yechilgan savollar: <b>${savolSoni}</b></p>
                 <p>To'g'ri javoblar soni: <b>${togriJavoblar}</b></p>
-                <p>Yakuniy Theta darajangiz: <b>${theta.toFixed(2)}</b></p>
+                <p>Yakuniy bilim darajangiz: <b>${theta.toFixed(2)}</b></p>
                 <p>Milliy sertifikat bali: <b>${yakuniyBall}</b></p>
                 <p>Sertifikat darajasi: <b>${daraja}</b></p>
-                <button class="submit-btn" onclick="natijaniBotgaYuborish()">Natijani Telegram botga yuborish</button>
-                <button class="submit-btn" style="background-color:#6c757d;" onclick="location.reload()">Qayta ishlash</button>
+                <button class="yuborish_tugmasi" style="background-color:#6c757d;" onclick="location.reload()">Qayta ishlash</button>
                 `;
         }
         </script>
